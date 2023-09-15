@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#FF1F3D",
+              btnBg: "rgba(37, 37, 37, 0.20)",
+              textColor: "rgba(23, 23, 23, 0.70)",
+              bgcolor: "#171717",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="container mx-auto py-2">
+    <header>
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <img class="w-28 md:w-36 lg:w-48" src="./image/Logo.png" alt="" srcset="" />
+        </div>
+        
+          <a
+            onclick="handleSortOrder()"
+            class="btn btn-ghost bg-btnBg btn-sm lg:btn-md md:btn-md normal-case text-base lg:text-lg"
+            >Sort by view</a
+          >
+       
+        <div class="navbar-end">
+          <a
+            onclick="handleBlogPage()"
+            class="btn text-white text-lg btn-sm lg:btn-md md:btn-md font-medium bg-clifford hover:bg-clifford"
+            >Blog</a
+          >
+        </div>
+      </div>
+    </header>
+    <hr class="my-3" />
+    <nav
+      id="category-list"
+      class="tabs tabs-boxed bg-white mx-auto flex justify-center gap-5"
+    >
+      <!-- <a class="tab bg-btnBg rounded hover:bg-gray-400">Tab 1</a> 
+            <a class="tab bg-btnBg rounded hover:bg-gray-400 tab-active">Tab 2</a> 
+            <a class="tab bg-btnBg rounded hover:bg-gray-400">Tab 3</a> -->
+    </nav>
+    <main class="my-10">
+      <div
+        id="card-container"
+        class="grid px-3 lg:px-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3"
+      ></div>
+      <div id="blank-container" class="lg:w-2/6 mx-auto">
+        <!-- <img src="./image/Icon.png" alt="Shoes" class="px-36 mb-5" />
+          <h1 class="text-3xl font-bold text-center">Oops!! Sorry, There is no <br> content here</h1> -->
+      </div>
+    </main>
+    <script src="./Script/script.js"></script>
+  </body>
+</html>

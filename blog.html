@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: "#FF1F3D",
+                btnBg: "rgba(37, 37, 37, 0.20)",
+                textColor:'rgba(23, 23, 23, 0.70)',
+              },
+            },
+          },
+        };
+      </script>
+</head>
+<body class=" w-full md:w-10/12 md:mx-auto lg:w-8/12 lg:mx-auto my-5">
+    <main>
+        <div class=" space-y-5">
+          <div class="lg:hidden md:hidden">
+            <h1 class="collapse-title text-4xl font-medium">Blog Questions</h1>
+          </div>
+            <div class="hidden lg:flex md:flex grid-cols-1 justify-between items-center">
+                <h1 class="collapse-title text-4xl font-medium">Blog Questions</h1>
+                <button onclick="BackMainPage()" class="btn text-white text-lg font-medium bg-clifford hover:bg-clifford">Back to Main Page</button>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" checked="checked" /> 
+                <div class="collapse-title text-xl font-medium">
+                    Discuss the scope of var, let, and const ?
+                </div>
+                <div class="collapse-content space-y-2"> 
+                  <p class=" font-bold">Answer: <span><p>var, let, and const are three ways to declare variables in JavaScript, each with its own scope and behavior.</p></span></p>
+                  
+                   <ul class="space-y-3">
+                    <li><span class="font-bold">var:</span> Variables declared with var are function-scoped and are hoisted to the top of their function or global scope. They can be both reassigned and redefined within the same scope.</li>
+                    <li><span class="font-bold">let:</span> Variables declared with let are block-scoped, meaning they are only accessible within the block they are defined in. They are also hoisted but not initialized, so referencing them before declaration results in an error. let variables can be reassigned within the same scope but cannot be redefined.</li>
+                    <li><span class="font-bold">const:</span> Variables declared with const are also block-scoped and hoisted but cannot be reassigned or redefined after their initial assignment. However, if the variable is an object or array, its properties or elements can be modified.</li>
+                   </ul>
+                   <table class="table-auto w-full text-center border">
+                    <thead>
+                      <tr class="border">
+                        <th>Key</th>
+                        <th>Scope</th>
+                        <th>Can Be Redeclared</th>
+                        <th>Can Be Reassigned</th>
+                        <th>Hoisting Behavior</th>
+                      </tr>
+                    </thead>
+                    <tbody >
+                      <tr class="border">
+                        <td>var</td>
+                        <td>function & global</td>
+                        <td>yes</td>
+                        <td>yes</td>
+                        <td>initialized with undefined</td>
+                      </tr>
+                      <tr class="border">
+                        <td>let</td>
+                        <td>block</td>
+                        <td>no</td>
+                        <td>yes</td>
+                        <td>uninitialized</td>
+                      </tr>
+                      <tr class="border">
+                        <td>const</td>
+                        <td>block</td>
+                        <td>no</td>
+                        <td>no</td>
+                        <td>uninitialized</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" /> 
+                <div class="collapse-title text-xl font-medium">
+                    Tell us the use cases of null and undefined
+                </div>
+                <div class="collapse-content space-y-3"> 
+                    <p class=" font-bold">Answer: <span><p>null and undefined are two distinct values in JavaScript, and they have different use cases:</p></span></p>
+                  
+                    <ul class="space-y-3">
+                     <li><span class="font-bold">null:</span> null is used to indicate intentional absence of a value, clearing a variable or property.</li>
+                     <li><span class="font-bold">undefined:</span> undefined is the default value for uninitialized variables or non-existent properties in objects, signaling lack of definition or initialization.</li>
+                    </ul>
+                    <div class=" h-52 rounded-lg">
+                        <img class="h-52 rounded-lg" src="./image/as.png" alt="">
+                    </div>
+                </div>
+              </div>
+              <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" /> 
+                <div class="collapse-title text-xl font-medium">
+                    What do you mean by REST API?
+                </div>
+                <div class="collapse-content space-y-3"> 
+                    <p class=" font-bold">Answer: <span><p>
+                        A REST API is a way for computer systems to communicate over the internet. It uses standardized rules and URLs to access and manipulate data. </p></span></p>
+                        <table class="table-auto w-full md:w-10/12 lg:w-8/12 text-start border">
+                            <thead>
+                              <tr class="border text-base">
+                                <th class="border">REST API Methods</th>
+                                <th class="border">Description</th>
+                              </tr>
+                            </thead>
+                            <tbody >
+                              <tr class="border">
+                                <td class="border">GET</td>
+                                <td class="border">Retrieve information about the REST API resource</td>
+                                
+                              </tr>
+                              <tr class="border">
+                                <td class="border">POST</td>
+                                <td class="border">Create a REST API resource</td>
+                                
+                              </tr>
+                              <tr class="border">
+                                <td class="border">PUT</td>
+                                <td class="border">Update a REST API resource</td>
+                                
+                              </tr>
+                              <tr class="border">
+                                <td class="border">DELETE</td>
+                                <td class="border">Delete a REST API resource or related component</td>
+                  
+                              </tr>
+                            </tbody>
+                          </table>
+                </div>
+
+              </div>
+              <div class="lg:hidden md:hidden">
+                <button onclick="BackMainPage()" class="btn text-white text-lg font-medium bg-clifford hover:bg-clifford w-full">Back to Main Page</button>
+              </div>
+        </div>
+    </main>
+      <script src="./Script/script.js"></script>
+</body>
+</html>
